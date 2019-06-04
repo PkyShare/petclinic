@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.pky</groupId>
+        <artifactId>petclinic-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../petclinic-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>petclinic-commons-domain</artifactId>
+    <packaging>jar</packaging>
+
+    <name>petclinic-commons-domain</name>
+
+    <dependencies>
+        <!-- Spring Begin -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!-- Spring End -->
+
+        <!-- Commons Begin -->
+
+        <!-- Commons End -->
+
+        <!-- Projects Begin -->
+        <dependency>
+            <groupId>com.pky</groupId>
+            <artifactId>petclinic-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- Projects End -->
+    </dependencies>
+</project>

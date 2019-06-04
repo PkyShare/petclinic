@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbDrugsMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbDrugs">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="drugs_name" jdbcType="VARCHAR" property="drugsName" />
+    <result column="drugs_type" jdbcType="VARCHAR" property="drugsType" />
+    <result column="main_components" jdbcType="VARCHAR" property="mainComponents" />
+    <result column="specifications" jdbcType="VARCHAR" property="specifications" />
+    <result column="indication" jdbcType="VARCHAR" property="indication" />
+    <result column="usage_dosage" jdbcType="VARCHAR" property="usageDosage" />
+    <result column="manufacturer" jdbcType="VARCHAR" property="manufacturer" />
+    <result column="supply_unit" jdbcType="VARCHAR" property="supplyUnit" />
+    <result column="quality_guarantee_period" jdbcType="BIGINT" property="qualityGuaranteePeriod" />
+  </resultMap>
+</mapper>

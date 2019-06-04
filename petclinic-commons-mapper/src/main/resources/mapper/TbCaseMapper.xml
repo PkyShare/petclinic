@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbCaseMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbCase">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="card_id" jdbcType="BIGINT" property="cardId" />
+    <result column="main_suit" jdbcType="VARCHAR" property="mainSuit" />
+    <result column="weidth" jdbcType="BIGINT" property="weidth" />
+    <result column="temperature" jdbcType="BIGINT" property="temperature" />
+    <result column="morbidity_date" jdbcType="TIMESTAMP" property="morbidityDate" />
+    <result column="diagnosis_date" jdbcType="TIMESTAMP" property="diagnosisDate" />
+    <result column="first_diagnosis_res" jdbcType="VARCHAR" property="firstDiagnosisRes" />
+    <result column="assay_res" jdbcType="VARCHAR" property="assayRes" />
+    <result column="end_diagnosis_res" jdbcType="VARCHAR" property="endDiagnosisRes" />
+    <result column="prescription_id" jdbcType="VARCHAR" property="prescriptionId" />
+    <result column="doctor" jdbcType="VARCHAR" property="doctor" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+  </resultMap>
+</mapper>

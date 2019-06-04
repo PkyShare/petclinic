@@ -1,0 +1,93 @@
+package com.pky.petclinic.commons.service.impl;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.pky.petclinic.commons.dto.AbstractBaseDomain;
+import com.pky.petclinic.commons.service.BaseCrudService;
+import org.springframework.beans.factory.annotation.Autowired;
+import tk.mybatis.mapper.MyMapper;
+import tk.mybatis.mapper.entity.Example;
+
+import java.lang.reflect.ParameterizedType;
+
+public class BaseCrudServiceImpl<T extends AbstractBaseDomain, M extends MyMapper<T>> implements BaseCrudService<T> {
+
+    @Autowired
+    protected M mapper;
+
+    /**
+     * 获取泛型的 Class
+     */
+    private Class<T> entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+
+    @Override
+    public boolean unique(String property, String value) {
+        //tk_Mybaties 中 Example 需要传递实体类的 Class
+        Example example = new Example(entityClass);
+        example.createCriteria().andEqualTo(property, value);
+        int result = mapper.selectCountByExample(example);
+
+        if(result > 0) {
+            return false ;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean unique(String property, Long value){
+        //tk_Mybaties 中 Example 需要传递实体类的 Class
+        Example example = new Example(entityClass);
+        example.createCriteria().andEqualTo(property, value);
+        int result = mapper.selectCountByExample(example);
+
+        if(result > 0) {
+            return false ;
+        }
+        return true;
+    }
+
+    @Override
+    public T save(T domain) {
+        int result = 0;
+
+        //创建
+        if(domain.getId() == null){
+            result = mapper.insertUseGeneratedKeys(domain);
+        }
+
+        //更新
+        else {
+            result = mapper.updateByPrimaryKey(domain);
+        }
+
+        //保存数据成功
+        if(result > 0){
+            return domain;
+        }
+
+        //保存失败
+        return null;
+    }
+
+    @Override
+    public PageInfo<T> page(T domain, int pageNum, int pageSize) {
+        Example example = new Example(entityClass);
+        example.createCriteria().andEqualTo(domain);
+
+        PageHelper.startPage(pageNum, pageSize);
+        PageInfo<T> pageInfo = new PageInfo<>(mapper.selectByExample(example));
+        return pageInfo;
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        //删除
+        int result = mapper.deleteByPrimaryKey(id);
+
+        //删除成功
+        if(result > 0){
+            return true;
+        }
+        return false;
+    }
+}

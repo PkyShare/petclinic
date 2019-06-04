@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbWatinglistMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbWatinglist">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="card_id" jdbcType="BIGINT" property="cardId" />
+    <result column="register_id" jdbcType="BIGINT" property="registerId" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="petname" jdbcType="VARCHAR" property="petname" />
+    <result column="wait_diagnosis_type" jdbcType="VARCHAR" property="waitDiagnosisType" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+  </resultMap>
+
+  <select id="getByType" resultType="com.pky.petclinic.commons.domain.TbWatinglist">
+    select * from tb_watinglist
+    where wait_diagnosis_type = #{type}
+  </select>
+</mapper>

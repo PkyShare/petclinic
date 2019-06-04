@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.pky</groupId>
+        <artifactId>petclinic-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../petclinic-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>petclinic-commons-service-redis</artifactId>
+    <packaging>jar</packaging>
+
+    <name>petclinic-commons-service-redis</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.pky</groupId>
+            <artifactId>petclinic-commons-mapper</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- Spring Boot start -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- Spring Boot end -->
+
+        <!-- Commons start-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <!-- Commons end-->
+    </dependencies>
+</project>

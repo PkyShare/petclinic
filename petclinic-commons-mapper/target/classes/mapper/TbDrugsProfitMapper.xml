@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbDrugsProfitMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbDrugsProfit">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="drugs_name" jdbcType="VARCHAR" property="drugsName" />
+    <result column="drugs_type" jdbcType="VARCHAR" property="drugsType" />
+    <result column="retail_price" jdbcType="BIGINT" property="retailPrice" />
+    <result column="sales_amount" jdbcType="BIGINT" property="salesAmount" />
+    <result column="profit" jdbcType="BIGINT" property="profit" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+  </resultMap>
+</mapper>

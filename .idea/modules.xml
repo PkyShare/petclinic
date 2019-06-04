@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/petclinic.iml" filepath="$PROJECT_DIR$/.idea/petclinic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-commons/petclinic-commons.iml" filepath="$PROJECT_DIR$/petclinic-commons/petclinic-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-commons-domain/petclinic-commons-domain.iml" filepath="$PROJECT_DIR$/petclinic-commons-domain/petclinic-commons-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-commons-mapper/petclinic-commons-mapper.iml" filepath="$PROJECT_DIR$/petclinic-commons-mapper/petclinic-commons-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-commons-service/petclinic-commons-service.iml" filepath="$PROJECT_DIR$/petclinic-commons-service/petclinic-commons-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-commons-service-redis/petclinic-commons-service-redis.iml" filepath="$PROJECT_DIR$/petclinic-commons-service-redis/petclinic-commons-service-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-database/petclinic-database.iml" filepath="$PROJECT_DIR$/petclinic-database/petclinic-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-dependencies/petclinic-dependencies.iml" filepath="$PROJECT_DIR$/petclinic-dependencies/petclinic-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/petclinic-web-admin/petclinic-web-admin.iml" filepath="$PROJECT_DIR$/petclinic-web-admin/petclinic-web-admin.iml" />
+    </modules>
+  </component>
+</project>

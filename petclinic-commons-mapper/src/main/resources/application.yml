@@ -1,0 +1,33 @@
+spring:
+  # 数据源
+  datasource:
+    url: jdbc:mysql://192.168.171.128:3306/petclinic?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  # Jackson 设置时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # redis
+  redis:
+    host: 192.168.75.129
+    pool: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+# 开启 mybatis 二级缓存
+mybatis:
+  configuration:
+    cache-enabled: true
+
+# 日志级别
+logging:
+  level:
+    com:
+      pky:
+        petclinic: DEBUG
+

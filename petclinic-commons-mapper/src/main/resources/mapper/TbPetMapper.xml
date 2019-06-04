@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbPetMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbPet">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="petname" jdbcType="VARCHAR" property="petname" />
+    <result column="sex" jdbcType="BIGINT" property="sex" />
+    <result column="birth" jdbcType="TIMESTAMP" property="birth" />
+    <result column="breed" jdbcType="VARCHAR" property="breed" />
+    <result column="variety" jdbcType="VARCHAR" property="variety" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="sterilization" jdbcType="BIGINT" property="sterilization" />
+    <result column="immune" jdbcType="VARCHAR" property="immune" />
+  </resultMap>
+</mapper>

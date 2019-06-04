@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbDoctorDutyMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbDoctorDuty">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="doctor_id" jdbcType="BIGINT" property="doctorId" />
+    <result column="doctor_name" jdbcType="VARCHAR" property="doctorName" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="docker_level" jdbcType="BIGINT" property="dockerLevel" />
+    <result column="duty_date" jdbcType="VARCHAR" property="dutyDate" />
+    <result column="sex" jdbcType="BIGINT" property="sex" />
+    <result column="birth" jdbcType="TIMESTAMP" property="birth" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+  </resultMap>
+</mapper>

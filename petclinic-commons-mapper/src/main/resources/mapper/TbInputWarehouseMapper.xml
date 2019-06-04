@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pky.petclinic.commons.mapper.TbInputWarehouseMapper">
+  <resultMap id="BaseResultMap" type="com.pky.petclinic.commons.domain.TbInputWarehouse">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="drugs_id" jdbcType="BIGINT" property="drugsId" />
+    <result column="drugs_name" jdbcType="VARCHAR" property="drugsName" />
+    <result column="input_warehouse_date" jdbcType="TIMESTAMP" property="inputWarehouseDate" />
+    <result column="input_warehouse_num" jdbcType="BIGINT" property="inputWarehouseNum" />
+    <result column="purchase_price" jdbcType="BIGINT" property="purchasePrice" />
+    <result column="total_sum" jdbcType="BIGINT" property="totalSum" />
+    <result column="batch_num" jdbcType="VARCHAR" property="batchNum" />
+  </resultMap>
+</mapper>
